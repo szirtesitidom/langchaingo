@@ -189,7 +189,7 @@ require (
 	github.com/IBM/watsonx-go v1.0.0
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/PuerkitoBio/goquery v1.8.1
-	github.com/amikos-tech/chroma-go v0.1.2
+	github.com/szirtesitidom/chroma-go v0.1.2
 	github.com/aws/aws-sdk-go-v2 v1.26.1
 	github.com/aws/aws-sdk-go-v2/config v1.27.12
 	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.8.1

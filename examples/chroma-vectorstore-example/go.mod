@@ -5,7 +5,7 @@ go 1.22.0
 toolchain go1.22.1
 
 require (
-	github.com/amikos-tech/chroma-go v0.1.2
+	github.com/szirtesitidom/chroma-go v0.1.2
 	github.com/google/uuid v1.6.0
 	github.com/szirtesitidom/langchaingo v0.1.12
 )

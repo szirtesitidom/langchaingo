@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	chromatypes "github.com/amikos-tech/chroma-go/types"
+	chromatypes "github.com/szirtesitidom/chroma-go/types"
 	"github.com/szirtesitidom/langchaingo/embeddings"
 )
 
@@ -46,7 +46,7 @@ func WithEmbedder(e embeddings.Embedder) Option {
 }
 
 // WithDistanceFunction specifies the distance function which will be used (default is L2)
-// see: https://github.com/amikos-tech/chroma-go/blob/ab1339d0ee1a863be7d6773bcdedc1cfd08e3d77/types/types.go#L22
+// see: https://github.com/szirtesitidom/chroma-go/blob/ab1339d0ee1a863be7d6773bcdedc1cfd08e3d77/types/types.go#L22
 func WithDistanceFunction(distanceFunction chromatypes.DistanceFunction) Option {
 	return func(p *Store) {
 		p.distanceFunction = distanceFunction

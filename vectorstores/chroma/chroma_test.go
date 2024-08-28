@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	chromatypes "github.com/amikos-tech/chroma-go/types"
+	chromatypes "github.com/szirtesitidom/chroma-go/types"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 	"github.com/testcontainers/testcontainers-go"

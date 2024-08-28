@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	chromago "github.com/amikos-tech/chroma-go"
-	"github.com/amikos-tech/chroma-go/openai"
-	chromatypes "github.com/amikos-tech/chroma-go/types"
+	chromago "github.com/szirtesitidom/chroma-go"
+	"github.com/szirtesitidom/chroma-go/openai"
+	chromatypes "github.com/szirtesitidom/chroma-go/types"
 	"github.com/google/uuid"
 	"github.com/szirtesitidom/langchaingo/embeddings"
 	"github.com/szirtesitidom/langchaingo/schema"

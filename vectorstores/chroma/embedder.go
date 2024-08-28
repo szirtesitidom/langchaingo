@@ -3,7 +3,7 @@ package chroma
 import (
 	"context"
 
-	chromatypes "github.com/amikos-tech/chroma-go/types"
+	chromatypes "github.com/szirtesitidom/chroma-go/types"
 	"github.com/szirtesitidom/langchaingo/embeddings"
 )
 
