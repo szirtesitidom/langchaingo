@@ -36,6 +36,7 @@ type Store struct {
 	nameSpace    string
 	nameSpaceKey string
 	embedder     embeddings.Embedder
+	pureEmbedder chromatypes.EmbeddingFunction
 	includes     []chromatypes.QueryEnum
 }
 
@@ -61,19 +62,24 @@ func New(opts ...Option) (Store, error) {
 	s.client = chromaClient
 
 	var embeddingFunction chromatypes.EmbeddingFunction
-	if s.embedder != nil {
-		// inject user's embedding function, if provided
-		embeddingFunction = chromaGoEmbedder{Embedder: s.embedder}
+
+	if s.pureEmbedder == nil {
+		if s.embedder != nil {
+			// inject user's embedding function, if provided
+			embeddingFunction = chromaGoEmbedder{Embedder: s.embedder}
+		} else {
+			// otherwise use standard langchaingo OpenAI embedding function
+			var options []openai.Option
+			if s.openaiOrganization != "" {
+				options = append(options, openai.WithOpenAIOrganizationID(s.openaiOrganization))
+			}
+			embeddingFunction, err = openai.NewOpenAIEmbeddingFunction(s.openaiAPIKey, options...)
+			if err != nil {
+				return s, err
+			}
+		}
 	} else {
-		// otherwise use standard langchaingo OpenAI embedding function
-		var options []openai.Option
-		if s.openaiOrganization != "" {
-			options = append(options, openai.WithOpenAIOrganizationID(s.openaiOrganization))
-		}
-		embeddingFunction, err = openai.NewOpenAIEmbeddingFunction(s.openaiAPIKey, options...)
-		if err != nil {
-			return s, err
-		}
+		embeddingFunction = s.pureEmbedder
 	}
 
 	col, errCc := s.client.CreateCollection(context.Background(), s.nameSpace, map[string]any{}, true,

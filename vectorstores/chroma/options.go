@@ -76,6 +76,12 @@ func WithOpenAIOrganization(openAiOrganization string) Option {
 	}
 }
 
+func WithPureEmbedder(e chromatypes.EmbeddingFunction) Option {
+	return func(p *Store) {
+		p.pureEmbedder = e
+	}
+}
+
 func applyClientOptions(opts ...Option) (Store, error) {
 	o := &Store{
 		nameSpace:          DefaultNameSpace,
@@ -99,7 +105,7 @@ func applyClientOptions(opts ...Option) (Store, error) {
 	}
 
 	// a embedder or an openai api key must be provided
-	if o.openaiAPIKey == "" && o.embedder == nil {
+	if o.openaiAPIKey == "" && o.embedder == nil && o.pureEmbedder == nil {
 		return Store{}, fmt.Errorf("%w: missing embedder or openai api key", ErrInvalidOptions)
 	}
 
