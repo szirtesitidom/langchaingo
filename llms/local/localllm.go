@@ -8,9 +8,9 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/tmc/langchaingo/callbacks"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/local/internal/localclient"
+	"github.com/szirtesitidom/langchaingo/callbacks"
+	"github.com/szirtesitidom/langchaingo/llms"
+	"github.com/szirtesitidom/langchaingo/llms/local/internal/localclient"
 )
 
 var (

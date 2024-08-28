@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/tmc/langchaingo/jsonschema"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/openai"
+	"github.com/szirtesitidom/langchaingo/jsonschema"
+	"github.com/szirtesitidom/langchaingo/llms"
+	"github.com/szirtesitidom/langchaingo/llms/openai"
 )
 
 func main() {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/schema"
+	"github.com/szirtesitidom/langchaingo/llms"
+	"github.com/szirtesitidom/langchaingo/schema"
 )
 
 // Combining is a parser that combines multiple parsers into one.

@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/prompts"
-	"github.com/tmc/langchaingo/schema"
+	"github.com/szirtesitidom/langchaingo/prompts"
+	"github.com/szirtesitidom/langchaingo/schema"
 )
 
 func TestMapRerankInputVariables(t *testing.T) {

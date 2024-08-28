@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/tmc/langchaingo/embeddings"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/vectorstores"
+	"github.com/szirtesitidom/langchaingo/embeddings"
+	"github.com/szirtesitidom/langchaingo/schema"
+	"github.com/szirtesitidom/langchaingo/vectorstores"
 	"golang.org/x/exp/maps"
 )
 

@@ -17,7 +17,7 @@ const config = {
     mendableAnonKey: process.env.MENDABLE_ANON_KEY,
   },
   // Set the production url of your site here
-  url: "https://tmc.github.io",
+  url: "https://szirtesitidom.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/langchaingo/",
@@ -68,7 +68,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/tmc/langchaingo/edit/main/docs/",
+          editUrl: "https://github.com/szirtesitidom/langchaingo/edit/main/docs/",
           remarkPlugins: [
             [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
           ],
@@ -153,7 +153,7 @@ const config = {
           },
           // Please keep GitHub link to the right for consistency.
           {
-            href: "https://github.com/tmc/langchaingo",
+            href: "https://github.com/szirtesitidom/langchaingo",
             label: "GitHub",
             position: "right",
           },
@@ -188,7 +188,7 @@ const config = {
               },
               {
                 label: "Go",
-                href: "https://github.com/tmc/langchaingo",
+                href: "https://github.com/szirtesitidom/langchaingo",
               },
             ],
           },

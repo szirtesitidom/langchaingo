@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tmc/langchaingo/agents"
-	"github.com/tmc/langchaingo/chains"
-	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/tmc/langchaingo/tools"
-	"github.com/tmc/langchaingo/tools/serpapi"
+	"github.com/szirtesitidom/langchaingo/agents"
+	"github.com/szirtesitidom/langchaingo/chains"
+	"github.com/szirtesitidom/langchaingo/llms/openai"
+	"github.com/szirtesitidom/langchaingo/tools"
+	"github.com/szirtesitidom/langchaingo/tools/serpapi"
 )
 
 func main() {
